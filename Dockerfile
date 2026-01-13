@@ -8,7 +8,8 @@ WORKDIR /data
 RUN apk add --no-cache \
   curl \
   jq \
-  unzip
+  unzip \
+  tree
 
 COPY --chmod=+x ./src/* /app/
 
