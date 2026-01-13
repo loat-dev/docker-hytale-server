@@ -19,3 +19,16 @@ services:
       # Attach the relative directory 'data' to the container's /data path
       - ./data:/data
 ```
+
+First start using:
+```
+docker compose up
+```
+
+After that authenticate the downloader using the link in the console. Now you can open a second console and attach to the running instance using:
+
+```
+docker compose attach server
+```
+
+Here you also need to verify the server [as required by the Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual#authentication)
