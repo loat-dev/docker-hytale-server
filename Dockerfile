@@ -1,6 +1,6 @@
 FROM eclipse-temurin:25-jdk
 
-EXPOSE 5520
+EXPOSE 5520/udp
 
 ENV SERVER_PORT=5520
 
