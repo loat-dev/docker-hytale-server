@@ -2,6 +2,8 @@ FROM eclipse-temurin:25-jdk
 
 EXPOSE 5520
 
+ENV SERVER_PORT=5520
+
 VOLUME ["/data"]
 WORKDIR /data
 
