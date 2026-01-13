@@ -1,20 +1,20 @@
 name: 'Build and Push Image'
 
 on:
-  # push:
-  #   paths:
-  #     - '.github/workflows/build.yml'
-  #     - 'prepare/get_downloader.sh'
-  #     - 'src/*'
-  #     - 'Dockerfile'
+  push:
+    paths:
+      - '.github/workflows/build.yml'
+      - 'prepare/get_downloader.sh'
+      - 'src/*'
+      - 'Dockerfile'
     
   workflow_dispatch:
     inputs:
-      dry_run:
-        description: 'Dry run (no Push to GHCR)'
+      push:
+        description: 'Push to GHCR'
         required: false
         type: boolean
-        default: 'true'
+        default: 'false'
 
 permissions:
   contents: read
@@ -46,7 +46,7 @@ jobs:
           context: .
           file: './Dockerfile'
           platforms: 'linux/amd64'
-          push: ${{ github.event.inputs.dry_run != 'true' }}
+          push: ${{ github.event.inputs.push }}
           tags: |
             ghcr.io/${{ github.repository }}:linux-amd64-${{ github.sha }}
             ghcr.io/${{ github.repository }}:linux-amd64-latest
