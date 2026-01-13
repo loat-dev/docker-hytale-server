@@ -5,7 +5,7 @@ DOWNLOADER_URL="https://downloader.hytale.com/hytale-downloader.zip"
 DOWNLOADER_TEMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$DOWNLOADER_TEMP_DIR"' EXIT
 
-# Download and extract hytale downloader
+# Download, extract and run hytale downloader
 cd "$DOWNLOADER_TEMP_DIR"
 
 echo "Downloading Downloader..."
