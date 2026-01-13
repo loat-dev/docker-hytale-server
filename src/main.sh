@@ -19,8 +19,7 @@ echo "Extracting Downloader... Done!"
 echo "Run Downloader..."
 "$DOWNLOADER_TEMP_DIR/downloader" -download-path "$DOWNLOADER_TEMP_DIR/server.zip"
 
-mkdir -p "./server"
-unzip -q "$DOWNLOADER_TEMP_DIR/server.zip" -d "./server"
-ls -al "./server"
+unzip -q "$DOWNLOADER_TEMP_DIR/server.zip" -d "$DOWNLOADER_TEMP_DIR/server"
+ls -al "."
 echo "Run Downloader... Done!"
 
