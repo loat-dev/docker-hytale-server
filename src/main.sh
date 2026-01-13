@@ -21,4 +21,4 @@ tree "/data"
 echo "Run Downloader ... Done!"
 
 echo "Run Server ..."
-java -jar "./HytaleServer.jar" --assets "./assets.zip"
+java -jar "./HytaleServer.jar" --assets "./assets.zip" --help
