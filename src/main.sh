@@ -20,5 +20,8 @@ tree "/data"
 
 echo "Run Downloader ... Done!"
 
+echo "Set container to \"healthy\""
+touch "/app/.healthy"
+
 echo "Run Server ..."
-java -jar "./HytaleServer.jar" --assets "./assets.zip" --help
+java -jar "./HytaleServer.jar" --assets "./assets.zip" --bind "0.0.0.0:$SERVER_PORT"
