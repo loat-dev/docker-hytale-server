@@ -3,19 +3,22 @@ set -e
 
 DOWNLOADER_TEMP_DIR="$(mktemp -d)"
 
-echo "Run Downloader..."
+echo "Run Downloader ..."
 echo "  Running downloader, saving it to \"$DOWNLOADER_TEMP_DIR/server.zip\""
 "/app/downloader" -skip-update-check -download-path "$DOWNLOADER_TEMP_DIR/server.zip"
 
 echo "  Unzipping files from \"$DOWNLOADER_TEMP_DIR/server.zip\", saving it to \"$DOWNLOADER_TEMP_DIR/server/...\""
 unzip -q "$DOWNLOADER_TEMP_DIR/server.zip" -d "$DOWNLOADER_TEMP_DIR/server"
 
-tree "$DOWNLOADER_TEMP_DIR/server"
+echo "  Copying server files \"$DOWNLOADER_TEMP_DIR/server/Server/...\" to \"/data/...\""
+cp -r "$DOWNLOADER_TEMP_DIR/server/Server/." "/data/"
 
-echo "  Moving \"$DOWNLOADER_TEMP_DIR/server\" to \"/data\""
-mv "$DOWNLOADER_TEMP_DIR/server" "/data"
+echo "  Copying asset files \"$DOWNLOADER_TEMP_DIR/server/Assets.zip\" to \"/data/assets.zip\""
+cp -r "$DOWNLOADER_TEMP_DIR/server/Assets.zip" "/data/assets.zip"
 
 tree "/data"
 
-echo "Run Downloader... Done!"
+echo "Run Downloader ... Done!"
 
+echo "Run Server ..."
+java -jar "./HytaleServer.jar" --assets "./assets.zip"
