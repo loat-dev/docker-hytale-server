@@ -11,8 +11,8 @@ curl -fsSL -o "$DOWNLOADER_TEMP_DIR/downloader.zip" "$DOWNLOADER_URL"
 echo "Downloading Hytale Downloader... Done!"
 
 echo "Extracting Hytale Downloader..."
-mkdir -p "./downloader"
-unzip -q -d "./downloader" "$DOWNLOADER_TEMP_DIR/downloader.zip" "hytale-downloader-linux-amd64"
+unzip -q -d "$DOWNLOADER_TEMP_DIR" "$DOWNLOADER_TEMP_DIR/downloader.zip" "hytale-downloader-linux-amd64"
+mv "$DOWNLOADER_TEMP_DIR/hytale-downloader-linux-amd64" "./downloader"
 echo "Extracting Hytale Downloader... Done!"
 
-ls -al "./downloader"
+ls -al "./"
