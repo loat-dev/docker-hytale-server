@@ -1,4 +1,4 @@
-FROM eclipse-temurin:25-alpine
+FROM eclipse-temurin:25-jdk
 
 EXPOSE 5520
 
