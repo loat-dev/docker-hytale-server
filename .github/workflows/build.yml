@@ -47,6 +47,7 @@ jobs:
           platforms: 'linux/amd64'
           push: ${{ github.event.inputs.push || 'false' }}
           tags: |
-            ghcr.io/${{ github.repository }}:linux-amd64-${{ github.sha }}
-            ghcr.io/${{ github.repository }}:linux-amd64-latest
+            ghcr.io/${{ github.repository_owner }}/hytale-server:linux-amd64-${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/hytale-server:linux-amd64-latest
+            ghcr.io/${{ github.repository_owner }}/hytale-server:latest
     
