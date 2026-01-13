@@ -1,8 +1,8 @@
 #!/bin/sh
 
-READY_FILE="/run/.healthy"
+HEALTHY_FILE="/app/.healthy"
 
-if [ -f "$READY_FILE" ]; then
+if [ -f "$HEALTHY_FILE" ]; then
   # healthy
   exit 0
 else
