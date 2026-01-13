@@ -10,11 +10,8 @@ RUN apk add --no-cache \
   jq \
   unzip
 
-RUN ./prepare/get_downloader.sh
-COPY --chmod=+x ./downloader /usr/src/downloader
+COPY --chmod=+x ./src/* /app/
 
-COPY --chmod=+x ./src/* /usr/src/
-
-ENTRYPOINT ["/usr/src/main.sh"]
+ENTRYPOINT ["/app/main.sh"]
 HEALTHCHECK --start-period=2m --retries=2 --interval=30s \
-  CMD /usr/src/healthcheck.sh
+  CMD /app/healthcheck.sh
