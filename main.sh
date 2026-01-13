@@ -1,3 +1,5 @@
+#!/bin/sh
+
 HYTALE_DOWNLOADER="https://downloader.hytale.com/hytale-downloader.zip"
 
 # Download and extract hytale downloader
