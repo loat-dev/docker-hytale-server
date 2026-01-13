@@ -12,9 +12,10 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "5520:5520"
+      # Server port
+      - "5520:5520/udp"
 
     volumes:
-      # attach the relative directory 'data' to the container's /data path
+      # Attach the relative directory 'data' to the container's /data path
       - ./data:/data
 ```
