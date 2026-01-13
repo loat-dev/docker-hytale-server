@@ -2,6 +2,8 @@ FROM eclipse-temurin:25-alpine
 
 EXPOSE 5520
 
+VOLUME ["/data"]
+
 RUN apk add --no-cache \
   curl \
   jq \
