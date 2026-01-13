@@ -4,7 +4,7 @@ set -e
 DOWNLOADER_TEMP_DIR="$(mktemp -d)"
 
 echo "Run Downloader..."
-"/usr/src/downloader" -download-path "$DOWNLOADER_TEMP_DIR/server.zip"
+"/app/downloader" -download-path "$DOWNLOADER_TEMP_DIR/server.zip"
 
 unzip -q "$DOWNLOADER_TEMP_DIR/server.zip" -d "$DOWNLOADER_TEMP_DIR/server"
 ls -al "."
