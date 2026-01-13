@@ -3,15 +3,15 @@ FROM eclipse-temurin:25-alpine
 EXPOSE 5520
 
 VOLUME ["/data"]
+WORKDIR /data
 
 RUN apk add --no-cache \
   curl \
   jq \
   unzip
 
-WORKDIR /usr/src
-
-COPY ./main.sh .
-RUN chmod +x /usr/src/main.sh
+COPY --chmod=+x ./src/* /usr/src/
 
 ENTRYPOINT ["/usr/src/main.sh"]
+HEALTHCHECK --start-period=2m --retries=2 --interval=30s \
+  CMD /usr/src/healthcheck.sh
