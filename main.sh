@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+DATA_DIR="/data"
+mkdir -p "$DATA_DIR"
+
 DOWNLOADER_URL="https://downloader.hytale.com/hytale-downloader.zip"
 
 DOWNLOADER_TEMP_DIR="$(mktemp -d)"
