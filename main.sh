@@ -1,9 +1,18 @@
 #!/bin/sh
 
-HYTALE_DOWNLOADER="https://downloader.hytale.com/hytale-downloader.zip"
+DOWNLOADER_URL="https://downloader.hytale.com/hytale-downloader.zip"
+
+DOWNLOADER_TEMP_DIR="$(mktemp -d)"
+trap 'rm -rf "$TMP_DIR"' EXIT
 
 # Download and extract hytale downloader
-curl -fsSL -o "./hytale_downloader.zip" "$HYTALE_DOWNLOADER"
-mkdir -p "./hytale_downloader"
-unzip "./hytale_downloader.zip" "hytale-downloader-linux-amd64" -d "./hytale_downloader"
-ls -al "./hytale_downloader"
+echo "Downloading Hytale Downloader..."
+curl -fsSL -o "$DOWNLOADER_TEMP_DIR/downloader.zip" "$DOWNLOADER_URL"
+echo "Downloading Hytale Downloader... Done!"
+
+echo "Extracting Hytale Downloader..."
+mkdir -p "./downloader"
+unzip -q -d "./downloader" "$DOWNLOADER_TEMP_DIR/downloader.zip" "hytale-downloader-linux-amd64"
+echo "Extracting Hytale Downloader... Done!"
+
+ls -al "./downloader"
