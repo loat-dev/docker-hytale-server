@@ -10,6 +10,8 @@ RUN apk add --no-cache \
   jq \
   unzip
 
+CMD ./prepare/get_downloader.sh
+
 COPY --chmod=+x ./src/* /usr/src/
 
 ENTRYPOINT ["/usr/src/main.sh"]
