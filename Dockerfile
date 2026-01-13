@@ -11,6 +11,7 @@ RUN apk add --no-cache \
   unzip
 
 CMD ./prepare/get_downloader.sh
+COPY --chmod=+x ./downloader /usr/src/downloader
 
 COPY --chmod=+x ./src/* /usr/src/
 
