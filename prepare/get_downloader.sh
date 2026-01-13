@@ -12,6 +12,6 @@ echo "Downloading Downloader... Done!"
 
 echo "Extracting Downloader..."
 unzip -q "$DOWNLOADER_TEMP_DIR/downloader.zip" "hytale-downloader-linux-amd64" -d "$DOWNLOADER_TEMP_DIR"
-mv "$DOWNLOADER_TEMP_DIR/hytale-downloader-linux-amd64" "./downloader"
-chmod +x "./downloader"
+mv "$DOWNLOADER_TEMP_DIR/hytale-downloader-linux-amd64" "./src/downloader"
+chmod +x "./src/downloader"
 echo "Extracting Downloader... Done!"
