@@ -5,6 +5,8 @@ on:
     branches: 
       - 'main'
 
+  workflow_dispatch: {}
+
 jobs:
   test-dockerfile:
     runs-on: ubuntu-latest
