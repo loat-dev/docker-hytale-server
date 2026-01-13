@@ -16,6 +16,7 @@ jobs:
 
       - name: 'Prepare (Get downloader)'
         run: |
+          chmod +x ./prepare/get_downloader.sh
           ./prepare/get_downloader.sh
 
       - name: 'Build Docker image'
