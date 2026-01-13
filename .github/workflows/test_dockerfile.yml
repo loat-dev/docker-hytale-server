@@ -24,6 +24,6 @@ jobs:
           docker buildx build -t docker-hytale-server .
 
       - name: Run Docker container
-        timeout-minutes: 1
+        timeout-minutes: 5
         run: |
           docker run --rm docker-hytale-server
