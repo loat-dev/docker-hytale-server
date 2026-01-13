@@ -12,5 +12,10 @@ unzip -q "$DOWNLOADER_TEMP_DIR/server.zip" -d "$DOWNLOADER_TEMP_DIR/server"
 
 tree "$DOWNLOADER_TEMP_DIR/server"
 
+echo "  Moving \"$DOWNLOADER_TEMP_DIR/server\" to \"/data\""
+mv "$DOWNLOADER_TEMP_DIR/server" "/data"
+
+tree "/data"
+
 echo "Run Downloader... Done!"
 
