@@ -1,2 +1,2 @@
-# docker-hytale-server
+# Docker Hytale Server
 Hytale server Docker image.
