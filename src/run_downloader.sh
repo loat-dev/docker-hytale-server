@@ -4,7 +4,7 @@ set -e
 DOWNLOADER_TEMP_DIR="$(mktemp -d)"
 
 echo "Run Downloader ..."
-echo "  Running downloader, saving files to \"$DOWNLOADER_TEMP_DIR/server.zip\""
+echo "  Running downloader, saving files to \"$DOWNLOADER_TEMP_DIR/server.zip\", this may take a while"
 /app/downloader \
   -skip-update-check \
   -credentials-path "./.hytale-downloader-credentials.json" \
