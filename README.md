@@ -60,6 +60,9 @@ To detach again, press <kbd>CTRL</kbd>+<kbd>p</kbd> and then <kbd>CTRL</kbd>+<kb
 
 You can also look up the [Hytale Server Manual](https://support.hytale.com/hc/en-us/articles/45326769420827-Hytale-Server-Manual#authentication) for more information.
 
+
+---
+
 ## Volumes
 
 ### `/data`
@@ -68,12 +71,14 @@ Server files are stored in this directory.
 ### `/backup`
 Backup files are stored in this directory.
 
+---
 
 ## Ports
 
 ### `5520`
 The default server port.
 
+---
 
 ## Environment Variables
 
