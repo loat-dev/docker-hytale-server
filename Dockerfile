@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   unzip \
   && rm -rf /var/lib/apt/lists/*
 
-COPY --chmod=+x ./src/* /app/
+COPY --chmod=+x ./src/ /app/
 
 ENTRYPOINT ["/app/main.sh"]
 HEALTHCHECK --start-period=2m --retries=2 --interval=30s \
