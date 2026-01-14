@@ -3,7 +3,7 @@ set -e
 
 /app/health/set_unhealthy.sh
 
-if [ "$DOWNLOAD_NEW_FILES_ON_START" = "true" ] || [ ! -f "./HytaleServer.jar" ] || [ ! -f "./assets.zip" ]; then
+if [ "$ENABLE_DOWNLOAD_NEW_FILES_ON_START" = "true" ] || [ ! -f "./HytaleServer.jar" ] || [ ! -f "./assets.zip" ]; then
   /app/run_downloader.sh \
     -credentials-path "./.hytale-downloader-credentials.json" \
     -download-path "./assets.zip"
