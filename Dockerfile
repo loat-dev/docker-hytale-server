@@ -21,4 +21,4 @@ RUN tree /app
 
 ENTRYPOINT ["/app/main.sh"]
 HEALTHCHECK --start-period=2m --retries=2 --interval=30s \
-  CMD /app/healthcheck.sh
+  CMD /app/health/check.sh

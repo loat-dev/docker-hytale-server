@@ -1,10 +1,10 @@
 #!/bin/sh
 set -e
 
-./health/set_unhealthy.sh
+/app/health/set_unhealthy.sh
 
 if [ "$DOWNLOAD_NEW_FILES_ON_START" = "true" ] || [ ! -f "./HytaleServer.jar" ] || [ ! -f "./assets.zip" ]; then
-  ./run_downloader.sh \
+  /app/run_downloader.sh \
     -credentials-path "./.hytale-downloader-credentials.json" \
     -download-path "./assets.zip"
 else
@@ -12,7 +12,7 @@ else
 fi
 
 echo "Set container to \"healthy\""
-./health/set_healthy.sh
+/app/health/set_healthy.sh
 
 echo "Run Server ..."
 java \
