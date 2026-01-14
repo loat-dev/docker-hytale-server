@@ -46,12 +46,13 @@ chmod +x hytale-downloader-linux-amd64
 | Command | What it Does |
 |---------|--------------|
 | `./hytale-downloader` | Download latest release |
-| `./hytale-downloader -print-version` | Show game version without downloading |
-| `./hytale-downloader -version` | Show hytale-downloader version |
 | `./hytale-downloader -check-update` | Check for hytale-downloader updates |
+| `./hytale-downloader -credentials-path <path>` | Path to credentials file |
 | `./hytale-downloader -download-path game.zip` | Download to specific file |
 | `./hytale-downloader -patchline pre-release` | Download from pre-release channel |
+| `./hytale-downloader -print-version` | Show game version without downloading |
 | `./hytale-downloader -skip-update-check` | Skip the automatic update check |
+| `./hytale-downloader -version` | Show hytale-downloader version |
 
 ## Troubleshooting
 
