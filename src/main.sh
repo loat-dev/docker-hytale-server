@@ -18,7 +18,8 @@ cp -r "$DOWNLOADER_TEMP_DIR/server/Server/." "/data/"
 echo "  Copying asset files \"$DOWNLOADER_TEMP_DIR/server/Assets.zip\" to \"/data/assets.zip\""
 cp -r "$DOWNLOADER_TEMP_DIR/server/Assets.zip" "/data/assets.zip"
 
-tree "/data"
+echo "  Cleaning up"
+rm -rf "$DOWNLOADER_TEMP_DIR"
 
 echo "Run Downloader ... Done!"
 
@@ -26,4 +27,8 @@ echo "Set container to \"healthy\""
 touch "/app/.healthy"
 
 echo "Run Server ..."
-java -jar "./HytaleServer.jar" --assets "./assets.zip" --bind "0.0.0.0:$SERVER_PORT"
+java \
+  -XX:AOTCache "./HytaleServer.aot" \
+  -jar "./HytaleServer.jar" \
+  --assets "./assets.zip" \
+  --bind "0.0.0.0:$SERVER_PORT"

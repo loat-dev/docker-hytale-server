@@ -7,6 +7,7 @@ Hytale server Docker image.
 ```yml
 services:
   server:
+    container_name: server
     image: ghcr.io/loat-dev/hytale-server:latest
     pull_policy: daily
     tty: true

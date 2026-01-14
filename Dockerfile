@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   curl \
   jq \
   unzip \
-  tree \
   && rm -rf /var/lib/apt/lists/*
 
 COPY --chmod=+x ./src/* /app/
