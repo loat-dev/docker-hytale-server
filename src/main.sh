@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+rm -f "/app/.healthy"
+
 DOWNLOADER_TEMP_DIR="$(mktemp -d)"
 
 echo "Run Downloader ..."
