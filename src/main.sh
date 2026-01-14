@@ -14,11 +14,11 @@ fi
 args=""
 
 if [ "$ENABLE_BACKUP" = "true" ]; then
-  args="$args --backup --backup-dir=\"/backup\" --backup-frequency=$BACKUP_FREQUENCY --backup-max-count=$BACKUP_MAX_COUNT"
+  args="$args --backup --backup-dir='/backup' --backup-frequency=$BACKUP_FREQUENCY --backup-max-count=$BACKUP_MAX_COUNT"
 fi
 
 if [ "$ENABLE_PERSISTENT_LOGIN" = "true" ]; then
-  args="$args --boot-command=\"/auth persistence Encrypted\""
+  args="$args --boot-command='/auth persistence Encrypted'"
 fi
 
 echo "Set container to \"healthy\""
