@@ -17,8 +17,8 @@ services:
       - "5520:5520/udp"
 
     volumes:
-      # Attach the relative directory 'data' to the container's /data path
       - ./data:/data
+      - ./backup:/backup
 ```
 
 > [!NOTE]
