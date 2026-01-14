@@ -21,12 +21,15 @@ services:
       - ./data:/data
 ```
 
+> [!NOTE]
+> The following authentication process is far from perfect, but currently there is no other way of authenticating the server automatically. If Hytale provides a way of authenticating the server automatically in the future, I will update the instructions and the process accordingly.
+
 First start the server using:
 ```
 docker compose up
 ```
 
-After that authenticate the downloader using the link in the console. The server should now start downloading the server files. After that the server should be started automatically.
+After that, authenticate the downloader, using the link in the console (You only have to do this once). The server should now start downloading the server files. After that the server should be started automatically.
 
 > [!WARNING]
 > Files will be downloaded even if it doesn't seem to look like it. Just give it some time. This takes some minutes.
