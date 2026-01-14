@@ -21,7 +21,7 @@ services:
       - ./data:/data
 ```
 
-First start using:
+First start the server using:
 ```
 docker compose up
 ```
