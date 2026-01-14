@@ -31,7 +31,7 @@ touch "/app/.healthy"
 
 echo "Run Server ..."
 java \
-  -XX:AOTCache "./HytaleServer.aot" \
+  -XX:AOTCache="./HytaleServer.aot" \
   -jar "./HytaleServer.jar" \
   --assets "./assets.zip" \
   --bind "0.0.0.0:$SERVER_PORT"
