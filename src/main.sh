@@ -16,7 +16,8 @@ echo "Set container to \"healthy\""
 
 echo "Run Server ..."
 java \
-  -XX:AOTCache="./HytaleServer.aot" \
+  "-Xms$MIN_MEMORY" \
+  "-Xmx$MAX_MEMORY" \
   -jar "./HytaleServer.jar" \
   --assets "./assets.zip" \
   --bind "0.0.0.0:$PORT" \
