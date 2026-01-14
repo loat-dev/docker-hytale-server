@@ -68,10 +68,17 @@ Server files are stored in this directory.
 ### `/backup`
 Backup files are stored in this directory.
 
+
+## Ports
+
+### `5520`
+The default server port.
+
+
 ## Environment Variables
 
 ### `PORT`
-Changes the server port.
+Changes the default server port inside the container.
 - Default: 5520
 
 ### `MIN_MEMORY`
