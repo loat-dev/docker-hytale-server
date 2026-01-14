@@ -11,6 +11,12 @@ else
   echo "Skipping Downloader, using existing files"
 fi
 
+args=""
+
+if [ "$BACKUP_ENABLED" = "true" ]; then
+  args="$args --backup --backup-path /backup --backup-frequency $BACKUP_FREQUENCY --backup-max-count $BACKUP_MAX_COUNT"
+fi
+
 echo "Set container to \"healthy\""
 /app/health/set_healthy.sh
 
@@ -21,4 +27,5 @@ java \
   -jar "./HytaleServer.jar" \
   --assets "./assets.zip" \
   --bind "0.0.0.0:$PORT" \
+  $args \
   $EXTRA_ARGS
