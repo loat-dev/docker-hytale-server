@@ -84,36 +84,36 @@ The default server port.
 
 ### `PORT`
 Changes the default server port inside the container.
-- Default: 5520
+- Default: `5520`
 
 ### `MIN_MEMORY`
 Set the minimum amount of memory to allocate to the server.
-- Default: "1G"
+- Default: `"1G"`
 
 ### `MAX_MEMORY`
 Set the maximum amount of memory to allocate to the server.
-- Default: "4G"
+- Default: `"4G"`
 
 ### `ENABLE_DOWNLOAD_NEW_FILES_ON_START`
 Enables downloading the server files on startup. If this is enabled, the server will download the latest server files on startup. The server will still download the files if either the `HytaleServer.jar` or `assets.zip` files are missing.
-- Default: false
+- Default: `false`
 
 ### `ENABLE_PERSISTENT_LOGIN`
 This feature is not supported yet.
-- Default: true
+- Default: `true`
 
 ### `ENABLE_BACKUP`
 Enables the build-in backup feature.
-- Default: true
+- Default: `true`
 
 ### `BACKUP_FREQUENCY`
 How often to create a backup.
-- Default: 30
+- Default: `30`
 
 ### `BACKUP_MAX_COUNT`
 How many backups to keep.
-- Default: 5
+- Default: `5`
 
 ### `EXTRA_ARGS`
 Provide additional arguments to the server after all the above arguments.
-- Default: ""
+- Default: `""`
