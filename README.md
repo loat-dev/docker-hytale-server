@@ -44,7 +44,7 @@ If you are still connected to the container, press <kbd>d</kbd> to detach. Now r
 docker attach server
 ```
 
-You should now be able to ender commands to the server. Type the following command to authenticate the server:
+You should now be able to enter commands to the server. Type the following command to authenticate the server:
 ```
 /auth login device
 ```
